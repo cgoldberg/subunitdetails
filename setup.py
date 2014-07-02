@@ -26,13 +26,13 @@ with open('README.rst') as f:
 
 setup(
     name='subunitdetails',
-    version='0.0.1',
+    version='0.0.2',
     author='Corey Goldberg',
     author_email='cgoldberg _at_ gmail.com',
     description='Subunit stream detail attachment extractor',
     long_description=LONG_DESCRIPTION,
     url='https://github.com/cgoldberg/subunit-details',
-    download_url='http://pypi.python.org/pypi/subunit-details',
+    download_url='http://pypi.python.org/pypi/subunitdetails',
     keywords='subunit parser unittest testtools testing'.split(),
     license='GNU GPLv3',
     packages=['subunitdetails'],

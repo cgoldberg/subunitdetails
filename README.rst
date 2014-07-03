@@ -1,71 +1,66 @@
 ===============
-subunit-details
+subunitdetails
 ===============
 
-  **Python Test Detail attachment extractor for SubUnit streams.**
+Requires:
+  - Python 3.x
+  - python-subunit
+  - testtools
 
-----
+Author:
+  - Corey Goldberg, 2014
 
- * Requires:
-    - Python 3.x
-    - subunit
-    - testtools
+++++
 
- * Author:
-    - Corey Goldberg, 2014
+About subunitdetails:
+----------------------
 
-----
+``subunitdetails`` takes a binary encoded ``subunit`` stream, and extracts test details (content object attachments) and saves them to the filesystem.
+
+Using subunitdetails to extract content object attachments:
+-----------------------------------------------------------
+
+Invoke the ``subunitdetails`` script, with a ``subunit`` file name as an argument.  It will extract the embedded content objects (test details) from the ``subunit`` result, into the current directory::
+
+    $ subunitdetails <file_name>
+
+++++
 
 About SubUnit:
 --------------
 
-  `SubUnit <https://launchpad.net/subunit>`_ is a streaming protocol for test results. The protocol is a binary encoding that is easily generated and parsed. By design all the components of the protocol conceptually fit into the ``xUnit`` ``TestCase -> TestResult`` interaction.
+`SubUnit <https://launchpad.net/subunit>`_ is a streaming protocol for test results. The protocol is a binary encoding that is easily generated and parsed. By design all the components of the protocol conceptually fit into the ``xUnit`` ``TestCase -> TestResult`` interaction.
 
-Test Details:
+
+About Test Details:
 -------------------
 
-  `Details <http://testtools.readthedocs.org/en/latest/for-test-authors.html#details>`_ may be attached from a ``TestCase``, using the `testtools <http://testtools.readthedocs.org/>`_ library (extension to Python's standard ``unittest`` lib).  They will end up as attachments to the ``TestResult``.  Using ``subunit``, the detail attachments may be of any format and mime-type, and can be parsed and retrieved.
+`Details <http://testtools.readthedocs.org/en/latest/for-test-authors.html#details>`_ are MIME-based `content objects <http://testtools.readthedocs.org/en/latest/for-test-authors.html#content>`_ that may be attached to a ``TestCase``.  This is done using the `testtools <http://testtools.readthedocs.org/>`_ library (extensions to Python's standard ``unittest`` lib).  It allows you to attach any information that you could possibly conceive of to a test, and allows ``testtools`` to use or serialize that information.
 
-About subunit-details:
-----------------------
-
-  Given a binary subunit stream stored as a file, the ``subunitdetails`` script will extract test detail attachments and save them individually to the filesystem.
-
-Using subunit-details to extract attachments:
-----------------------------------------------------
-
- * Invoke the ``subunitdetails`` script, with a subunit file name as an argument::
-
-    $ subunitdetails <subunit_file>
-
-Installing:
------------
-
- `subunit-details <http://pypi.python.org/pypi/subunit-details>`_ uses standard python packaging via `setuptools <https://pypi.python.org/pypi/setuptools>`_.
-
- There are a few options to choose from for installing:
+Using ``subunit``, the encoded stream can be parsed.  Test suite results and attached Details (with MIME-types) can then be retrieved.
 
 
- * install from PyPI, system-wide::
+Installing subunitdetails:
+------------------------------
 
-    $ sudo pip install subunit-details
+`subunit-details <http://pypi.python.org/pypi/subunit-details>`_ uses standard python packaging via `setuptools <https://pypi.python.org/pypi/setuptools>`_.
 
- * install from PyPI, using a virtualenv::
+There are a few ways to install ``subunitdetails``.
+
+* Install from `PyPI <https://pypi.python.org/pypi/subunitdetails>`_ using `pip <http://pip.readthedocs.org/>`_ (system-wide)::
+
+    $ sudo pip install subunitdetails
+
+* Install from `PyPI <https://pypi.python.org/pypi/subunitdetails>`_ using `pip <http://pip.readthedocs.org/>`_, into a `virtualenv <http://virtualenv.readthedocs.org/>`_:::
 
     $ virtualenv -p python3 .env
     $ source .env/bin/activate
-    $ pip install subunit-details
+    $ pip install subunitdetails
 
- * clone the dev repository and install, system-wide::
+* Clone the dev repository and install, using a virtualenv::
 
-    $ git clone https://github.com/cgoldberg/subunit-details.git
-    $ cd subunit-details
-    $ sudo python3 setup install
-
- * clone the dev repository and install, using a virtualenv::
-
-    $ git clone https://github.com/cgoldberg/subunit-details.git
-    $ cd subunit-details
+    $ git clone https://github.com/cgoldberg/subunitdetails.git
+    $ cd subunitdetails
     $ virtualenv -p python3 .env
     $ source .env/bin/activate
     $ python3 setup install

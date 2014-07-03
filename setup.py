@@ -14,7 +14,7 @@
 
 
 """
-setup/install script for subunit-details
+setup/install script for subunitdetails
 
 """
 
@@ -29,16 +29,16 @@ setup(
     version='0.0.2',
     author='Corey Goldberg',
     author_email='cgoldberg _at_ gmail.com',
-    description='Subunit stream detail attachment extractor',
+    description='SubUnit Details Parser - Test Detail attachment extractor.',
     long_description=LONG_DESCRIPTION,
-    url='https://github.com/cgoldberg/subunit-details',
+    url='https://github.com/cgoldberg/subunitdetails',
     download_url='http://pypi.python.org/pypi/subunitdetails',
     keywords='subunit parser unittest testtools testing'.split(),
     license='GNU GPLv3',
     packages=['subunitdetails'],
     install_requires=['python-subunit', 'testtools'],
     entry_points={
-        'console_scripts':['subunitdetails=subunitdetails.subunitdetails:main'],
+        'console_scripts':['subunitdetails=subunitdetails.subunitdetails:main']
     },
     classifiers=[
         'Development Status :: 4 - Beta',

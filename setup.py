@@ -26,10 +26,10 @@ with open('README.rst') as f:
 
 setup(
     name='subunitdetails',
-    version='0.0.3',
+    version='0.0.4',
     author='Corey Goldberg',
     author_email='cgoldberg _at_ gmail.com',
-    description='SubUnit Details Parser - Test Detail attachment extractor.',
+    description='SubUnit details parser - Test detail attachment extractor.',
     long_description=LONG_DESCRIPTION,
     url='https://github.com/cgoldberg/subunitdetails',
     download_url='http://pypi.python.org/pypi/subunitdetails',

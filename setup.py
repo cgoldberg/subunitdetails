@@ -4,8 +4,8 @@
 #
 #  license: GNU GPLv3
 #
-#  This file is part of: subunit-details
-#  https://github.com/cgoldberg/subunit-details
+#  This file is part of: subunitdetails
+#  https://github.com/cgoldberg/subunitdetails
 #
 #  This library is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU Lesser General Public
@@ -45,7 +45,6 @@ setup(
         'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
-        'Topic :: Office/Business :: Financial :: Investment',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.2',

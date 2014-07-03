@@ -1,4 +1,17 @@
 #!/usr/bin/env python3
+#
+#  Copyright (c) 2014, Corey Goldberg (cgoldberg@gmail.com)
+#
+#  license: GNU GPLv3
+#
+#  This file is part of: subunitdetails
+#  https://github.com/cgoldberg/subunitdetails
+#
+#  This library is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU Lesser General Public
+#  License as published by the Free Software Foundation; version 3 of the
+#  License
+
 
 import argparse
 import logging
